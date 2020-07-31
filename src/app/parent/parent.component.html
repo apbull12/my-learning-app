@@ -1,0 +1,22 @@
+<div class="parent centered">
+  <h1>Fill the Form details here!</h1>
+  <div>
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" #fname name="firstname" placeholder="Your name..">
+
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" #lname name="lastname" placeholder="Your last name..">
+
+    <label for="country">Country</label>
+    <select id="country" #country name="country">
+      <option value="India">India</option>
+      <option value="canada">Canada</option>
+      <option value="usa">USA</option>
+      <option value="usa">Other</option>
+    </select>
+    <button (click)="submitData(fname.value,lname.value,country.value)">Submit</button>
+    <p *ngIf="submitStatus" class="success-notify">Saved Successfully</p>
+  </div>
+
+</div>
+

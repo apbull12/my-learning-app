@@ -1,0 +1,21 @@
+<div class="child centered">
+  <div class="header">
+    <h1>Submitted Data list!</h1>
+    <button (click)="callForm()">&laquo; Back to Form</button>
+  </div>
+  <h3 *ngIf="list.empty">Please fill the form to see the results</h3>
+  <table *ngIf="!list.empty">
+    <tr>
+      <th>ID</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Country</th>
+    </tr>
+    <tr *ngFor="let li of list">
+      <td> {{ li.id }} </td>
+      <td>{{ li.fname }}</td>
+      <td>{{ li.lname }}</td>
+      <td>{{ li.country }}</td>
+    </tr>
+  </table>
+</div>
