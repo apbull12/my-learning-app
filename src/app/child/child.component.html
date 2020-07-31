@@ -3,8 +3,8 @@
     <h1>Submitted Data list!</h1>
     <button (click)="callForm()">&laquo; Back to Form</button>
   </div>
-  <h3 *ngIf="list.empty">Please fill the form to see the results</h3>
-  <table *ngIf="!list.empty">
+  <h3 *ngIf="list.length === 0">Please fill the form to see the results</h3>
+  <table *ngIf="list.length > 0">
     <tr>
       <th>ID</th>
       <th>First Name</th>
